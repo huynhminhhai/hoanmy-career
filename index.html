@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghi title dô</title>
-    <link rel="icon" type="image/png" href="./assets/images/favico.png">
+    <title>Hoanmy Career</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
 
     <!-- library -->
     <link rel="stylesheet" href="./assets/library/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/library/slick/slick/slick.css">
     <link rel="stylesheet" href="./assets/library/slick/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/header.css">
@@ -19,9 +20,103 @@
 </head>
 <body>
     <header>
-
+        <div class="container">
+            <div class="header">
+                <div>
+                    <img class="header-logo" src="./assets/images/logo.png" alt="Hoanmy Logo">
+                </div>
+                <div class="language">
+                    <a class="language-text active" href="#">EN</a>
+                    <a class="language-text" href="#">VI</a>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
+        <section class="hero">
+            <img class="hero-banner" src="./assets/images/hero-banner.png" alt="hoanmy hero banner">
+            <div class="container">
+                <div>
+                    <div class="hero-container">
+                        <div class="hero-heading">
+                            <h1 class="hero-title">DEDICATED HOAN MY JOB PORTAL</h1>
+                        </div>
+                        <form class="search">
+                            <div class="search-container">
+                                <div class="search-text">
+                                    <div class="keyword-text">
+                                        <div>
+                                            <img src="./assets/images/fi_search.svg" alt="search logo">
+                                        </div>
+                                        <input type="text" name="keyword" id="keyword" placeholder="Job tittle, Keyword...">
+                                    </div>
+                                </div>
+                                <div class="search-dropdown">
+                                    <div class="dropdown">
+                                        <div>
+                                            <img class="logo-location" src="./assets/images/search-location.svg" alt="location logo">
+                                        </div>
+                                        <div class="dropdown-label">Preferred Location</div>
+                                        <div class="dropdown-list">
+                                            <div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_01" value="1">
+                                                    <label for="checkbox-custom_01" class="checkbox-custom-label">Ho Chi Minh</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_02" value="2">
+                                                    <label for="checkbox-custom_02" class="checkbox-custom-label">Can Tho</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_03" value="3">
+                                                    <label for="checkbox-custom_03" class="checkbox-custom-label">Lam Dong</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_09" value="9">
+                                                    <label for="checkbox-custom_09" class="checkbox-custom-label">Da Nang</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_04" value="4">
+                                                    <label for="checkbox-custom_04" class="checkbox-custom-label">Dong Nai</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_05" value="5">
+                                                    <label for="checkbox-custom_05" class="checkbox-custom-label">Nghe An</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_06" value="6">
+                                                    <label for="checkbox-custom_06" class="checkbox-custom-label">Ca Mau</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_07" value="7">
+                                                    <label for="checkbox-custom_07" class="checkbox-custom-label">Binh duong</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="checkbox-custom_08" value="8">
+                                                    <label for="checkbox-custom_08" class="checkbox-custom-label">Binh Phuoc</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <img class="logo-dropdown" src="./assets/images/search-dropdown.svg" alt="dropdown cion">
+                                            <img class="logo-close" src="./assets/images/close-dropdown.svg" alt="close icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-button">
+                                    <button class="btn btn-primary">Find Job</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="career">
+            <div class="container">
+                Available Job Results
+            </div>
+        </section>
     </main>
     <footer>
 

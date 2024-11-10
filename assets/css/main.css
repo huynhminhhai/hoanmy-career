@@ -1,95 +1,80 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-        url('../fonts/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Lexend-ExtraBold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
-        url('../fonts/Roboto-Medium.woff') format('woff');
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-Regular.woff2') format('woff2'),
+        url('../fonts/Lexend-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-SemiBold.woff2') format('woff2'),
+        url('../fonts/Lexend-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Lexend-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-Medium.woff2') format('woff2'),
+        url('../fonts/Lexend-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Light.woff2') format('woff2'),
-        url('../fonts/Roboto-Light.woff') format('woff');
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-Light.woff2') format('woff2'),
+        url('../fonts/Lexend-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
-        url('../fonts/Roboto-Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-Bold.woff2') format('woff2'),
+        url('../fonts/Lexend-Bold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Light.woff2') format('woff2'),
-        url('../OpenSans-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Medium.woff2') format('woff2'),
-        url('../OpenSans-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Bold.woff2') format('woff2'),
-        url('../OpenSans-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Regular.woff2') format('woff2'),
-        url('../OpenSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFD-Medium';
-    src: url('SanFranciscoDisplay-Medium.woff2') format('woff2'),
-        url('SanFranciscoDisplay-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFD-Bold';
-    src: url('SanFranciscoDisplay-Bold.woff2') format('woff2'),
-        url('SanFranciscoDisplay-Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Lexend';
+    src: url('../fonts/Lexend-Thin.woff2') format('woff2'),
+        url('../fonts/Lexend-Thin.woff') format('woff');
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 :root {
-    --hover-color: #4db2ec;
+    --primary-500: #009BAB;
+    --primary-600: #007C89;
+    --secondary-500: #00749B;
+    --tertiary-500: #ABDFE1;
 }
 
 ul {
@@ -99,11 +84,9 @@ ul {
 }
 
 body {
-    font-family: 'SFD-Medium', sans-serif;
-    font-size: 14px;
-    line-height: 22px;
-    color: #222222;
-    background-color: #f4f4f4;
+    font-family: 'Lexend', sans-serif;
+    color: #000;
+    background-color: #fff;
     overflow-x: hidden;
 }
 
@@ -115,4 +98,346 @@ h3,
 h2,
 h1 {
     font-family: 'SFD-Bold', sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1440px;
+        padding: 0 60px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 24px 0;
+    }
+}
+
+/* components */
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+
+    text-transform: capitalize;
+}
+
+.btn-primary {
+    border: 1px solid var(--primary-500);
+    background-color: var(--primary-500);
+    color: #fff;
+    transition: all 0.3s linear;
+}
+
+.btn-primary:hover {
+    border: 1px solid var(--primary-600);
+    background-color: var(--primary-600);
+    transition: all 0.3s linear;
+}
+
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-white:focus {
+    border: 1px solid var(--secondary-500);
+    background-color: var(--secondary-500);
+}
+
+.btn-secondary {
+    border: 1px solid var(--tertiary-500);
+    background-color: #fff;
+    color: var(--primary-500);
+    transition: all 0.3s linear;
+}
+
+.btn-secondary:hover,
+.btn-white:hover {
+    border: 1px solid var(--primary-500);
+    background-color: var(--primary-500);
+    color: #fff;
+    transition: all 0.3s linear;
+}
+
+.btn-white {
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: var(--primary-500);
+    transition: all 0.3s linear;
+}
+
+
+/* hero */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.hero-banner {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top;
+    z-index: -1;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-heading {
+    padding: 154px 0 80px;
+}
+
+.hero-title {
+    color: #fff;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.hero .search-container {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.hero .search-button {
+    margin-left: 12px;
+}
+
+.hero .search-dropdown .dropdown {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #9199A3;
+}
+
+.hero .search-dropdown .logo-location,
+.hero .search-dropdown .logo-dropdown,
+.hero .search-dropdown .logo-close {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: all 0.3s linear;
+}
+
+.hero .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px 8px 14px;
+    border-radius: 8px;
+    width: 420px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.hero .dropdown.open {
+    border: 1px solid var(--primary-500);
+}
+
+.hero .dropdown.open .dropdown-list {
+    display: block;
+}
+
+.hero .dropdown.open .logo-dropdown {
+    transform: rotate(180deg);
+    transition: all 0.3s linear;
+}
+
+.hero .dropdown .dropdown-label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    max-width: 320px;
+    overflow: auto;
+}
+
+.hero .dropdown .dropdown-label::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.hero .dropdown .dropdown-label span {
+    padding: 8px 12px;
+}
+
+.hero .dropdown .selected-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    color: #464D61;
+    background-color: #F8F8F8;
+    border-radius: 30px;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+.hero .dropdown .dropdown-list {
+    background-color: #fff;
+    padding: 24px 32px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    width: 100%;
+    max-height: 308px;
+    overflow-y: auto;
+    z-index: 2;
+    border: 1px solid #E4E5E8;
+    box-shadow: 0px 8px 16px 0px rgba(0, 62, 68, 0.10);
+    display: none;
+}
+
+.hero .dropdown .dropdown-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.hero .dropdown .dropdown-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.hero .dropdown .dropdown-list::-webkit-scrollbar-thumb {
+    background: var(--tertiary-500);
+    border-radius: 8px;
+}
+
+.hero .dropdown .dropdown-list>div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.hero .dropdown .dropdown-list .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero .dropdown .dropdown-list .checkbox input[type=checkbox] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid var(--tertiary-500);
+    position: relative;
+}
+
+.hero .dropdown .dropdown-list .checkbox:hover input[type=checkbox] {
+    border: 1px solid var(--primary-500)
+}
+
+.hero .dropdown .dropdown-list .checkbox input[type="checkbox"]:checked {
+    background-color: var(--primary-500);
+}
+
+.hero .dropdown .dropdown-list .checkbox input[type="checkbox"]:checked::after {
+    content: '✔';
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    top: -1px;
+    left: 4px;
+}
+
+.hero .dropdown .dropdown-list .checkbox label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #474C54;
+    cursor: pointer;
+}
+
+.hero .keyword-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 420px;
+    padding: 8px 16px 8px 14px;
+    border-radius: 8px;
+}
+
+.hero .keyword-text input {
+    border: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #9199A3;
+    outline: none;
+}
+
+.hero .keyword-text input::placeholder {
+    color: #9199A3;
+}
+
+@media screen and (max-width: 576px) {
+
+    .hero {
+        min-height: 181px;
+    }
+
+    .hero-heading {
+        padding: 80px 0 0;
+    }
+
+    .hero-title {
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .hero .search {
+        width: 100%;
+        position: relative;
+        top: 40px;
+    }
+
+    .hero .search .search-dropdown,
+    .hero .search .search-button {
+        display: none;
+    }
+
+    .hero .search-container {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .hero .keyword-text,
+    .hero .search-text {
+        width: 100%;
+        background-color: #fff;
+        border-radius: 8px;
+    }
+
+}
+
+/* career */
+
+.career {
+    background-color: #ebebed;
+    padding: 80px 0;
 }
