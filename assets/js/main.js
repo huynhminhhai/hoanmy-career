@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    // hero
+
     let resultCheckbox = [
         {
             "text": "Ho Chi Minh",
@@ -114,6 +116,24 @@ $(document).ready(function () {
         });
     });
 
-    
+    // career
 
+    $('.filter-item-top').click(function() {
+
+        var $itemBottom = $(this).next('.filter-item-bottom');
+        var $icon = $(this).find('.filter-icon-up');
+
+
+        // Slide up any open itemBottoms
+        // $('.filter-item-bottom').not($itemBottom).slideUp().css('opacity', 0);
+
+        // Slide toggle the clicked itemBottom
+        if ($itemBottom.is(':visible')) {
+            $itemBottom.stop(true, true).slideUp().css('opacity', 0);
+            $icon.addClass('rotate');
+        } else {
+            $itemBottom.stop(true, true).slideDown().css('opacity', 1);
+            $icon.removeClass('rotate');
+        }
+    });
 });
