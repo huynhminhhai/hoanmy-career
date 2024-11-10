@@ -1,0 +1,337 @@
+.detail-head {
+    background-color: #f8f8f8;
+    padding: 80px 0 32px;
+}
+
+.detail {
+    padding: 0px 0 80px;
+    background-color: #f8f8f8;
+}
+
+.detail-head .detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detail-head .detail-header .back {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 150% */
+    text-transform: capitalize;
+    color: var(--primary-500);
+}
+
+.detail-head .detail-header .back img {
+    width: 24px;
+    height: auto;
+    object-fit: contain;
+}
+
+.detail-head .detail-header .breadcrumb {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #474C54;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-head .detail-header .breadcrumb > div:last-child {
+    color: #18191C;
+}
+
+.detail .detail-content {
+    padding: 60px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.detail .detail-content .logo {
+    padding-top: 12px;
+}
+
+.detail .detail-content .logo img {
+    width: 72px;
+    height: auto;
+    object-fit: contain;
+}
+
+.detail .detail-content .detail-content-header {
+    display: flex;
+    align-items: center;
+}
+
+.detail .detail-content .detail-content-header .detail-content-wrap {
+    display: flex;
+    align-items: self-start;
+    gap: 24px;
+    flex: 1;
+}
+
+.detail .detail-content .detail-content-heading {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail .detail-content .detail-content-heading .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+    color: #18191C;
+}
+
+.detail .detail-content-heading .requirement-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #9199A3;
+}
+
+.detail .detail-content-heading .requirement-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail .detail-infor-list {
+    padding: 32px;
+    border: 2px solid #F2FAFB;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.detail .detail-infor-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: #767F8C;
+}
+
+.detail .detail-infor-item div span {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: #18191C;
+}
+
+.detail .detail-infor-item div img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.detail .detail-body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.detail .detail-body .desc * {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: #18191C;
+}
+
+.detail .detail-body .desc p:last-child {
+    margin-bottom: 0;
+}
+
+.detail .detail-body .desc ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.detail .detail-body .title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+    color: var(--secondary-500);
+    margin-bottom: 16px;
+}
+
+/* otherJob */
+
+.otherJob {
+    padding: 32px 0 80px;
+    background-color: #f8f8f8;
+}
+
+.otherJob .otherJob-item-top .logo img {
+    width: 62px;
+    height: auto;
+    object-fit: contain;
+}
+
+.otherJob .otherJob-heading {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    color: #18191C;
+    margin-bottom: 32px;
+}
+
+.otherJob .otherJob-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.otherJob .otherJob-item {
+    background-color: #fff;
+    display: block;
+    padding: 24px 16px;
+    border-radius: 8px;
+    border: 1px solid #E4E5E8;
+}
+
+.otherJob .otherJob-item .otherJob-item-top {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+
+.career-list-mb {
+    display: flex;
+    flex-direction: row;
+}
+
+.otherJob .otherJob-bot {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+
+    .detail-head {
+        padding: 24px 0;
+    }
+
+    .detail {
+        background-color: #fff;
+        padding: 0;
+    }
+
+    .detail-head .detail-header {
+        margin-bottom: 0;
+        background-color: #f8f8f8;
+    }
+
+    .detail-head .detail-header .back {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        gap: 8px;
+    }
+
+    .detail-head .detail-header .breadcrumb {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        margin-bottom: 0;
+        gap: 2px;
+    }
+
+    .detail .detail-content {
+        padding: 32px 0;
+    }
+
+    .detail .detail-content .detail-content-header .detail-content-wrap {
+        flex-direction: column;
+    }
+
+    .detail .detail-content .detail-content-header button {
+        display: none;
+    }
+
+    .detail .detail-content .detail-content-heading .title {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    .detail .detail-content-heading .requirement-list {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        flex-wrap: wrap;
+    }
+
+    .detail .detail-content .detail-content-heading {
+        gap: 24px;
+    }
+
+    .detail .detail-content {
+        gap: 24px;
+    }
+
+    .detail .detail-body {
+        gap: 16px;
+    }
+
+    .detail .detail-body .title {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+    }
+
+    .detail .detail-body .desc * {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .detail .detail-infor-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        padding: 24px;
+    }
+
+    .detail .detail-content button {
+        width: 100%;
+    }
+
+    .career-list-mb {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
