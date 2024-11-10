@@ -35,7 +35,8 @@ $(document).ready(function () {
                     $label.append($labelItem);
 
                     // Handle the click event on the remove button
-                    $removeButton.on('click', function () {
+                    $removeButton.on('click', function (e) {
+                        e.stopPropagation(); 
                         // Remove the item from the result
                         resultCheckbox = resultCheckbox.filter(r => r.text !== item.text);
                         // Uncheck the corresponding checkbox
