@@ -181,12 +181,21 @@ h1 {
 }
 
 .hero-banner {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: auto;
     object-fit: cover;
     object-position: top;
     z-index: -1;
+}
+
+.hero .hero-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 .hero-container {
@@ -214,6 +223,7 @@ h1 {
     align-items: center;
     justify-content: center;
     background-color: #fff;
+    border-radius: 6px;
 }
 
 .hero .search-button {
@@ -422,8 +432,7 @@ h1 {
     }
 
     .hero .search-container {
-        background-color: transparent;
-        padding: 0;
+        padding: 8px 0;
     }
 
     .hero .keyword-text,
