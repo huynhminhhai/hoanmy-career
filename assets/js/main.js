@@ -160,4 +160,22 @@ $(document).ready(function () {
         $('.popup-thank').removeClass('active')
         $('.popup-form').removeClass('active')
     })
+
+    $('#upload-file').on('change', function() {
+        var file = this.files[0];
+        if (file) {
+            $('.upload-label .top').text(file.name);
+            $('.upload-label .bot').text('Size: ' + (file.size / 1024).toFixed(2) + ' KB');
+            
+            // Change icon after file upload
+            $('.upload-label .icon').html(`
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <path d="M37.5015 42H10.5C10.1022 42 9.72064 41.842 9.43934 41.5607C9.15803 41.2794 9 40.8978 9 40.5V7.5C9 7.10218 9.15803 6.72064 9.43934 6.43934C9.72064 6.15804 10.1022 6 10.5 6H28.5015L39.0015 16.5V40.5C39.0015 40.697 38.9627 40.892 38.8873 41.074C38.8119 41.256 38.7014 41.4214 38.5621 41.5607C38.4228 41.7 38.2575 41.8104 38.0755 41.8858C37.8935 41.9612 37.6984 42 37.5015 42Z" stroke="#009BAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.5 6V16.5H39.0015" stroke="#009BAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 25.5H30" stroke="#009BAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 31.5H30" stroke="#009BAB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            `);
+        }
+    });
 });
