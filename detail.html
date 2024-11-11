@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/detail.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -34,6 +36,143 @@
         </div>
     </header>
     <main>
+        <div class="popup-blur active"></div>
+        <div class="popup-form">
+            <div class="popup-form-container">
+                <form action="#" class="popup-form-wrap">
+                    <div class="popup-close close">
+                        <img src="./assets/images/X.svg" alt="close icon">
+                    </div>
+                    <div class="note">(<span>*</span>) Mandatory field</div>
+                    <div class="popup-fields">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="popup-field">
+                                    <div class="title"><span>*</span> First Name</div>
+                                    <div>
+                                        <input type="text" id="first-name" name="first-name"
+                                            placeholder="Enter your first name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="popup-field">
+                                    <div class="title"><span>*</span> Last Name</div>
+                                    <div>
+                                        <input type="text" id="last-name" name="last-name"
+                                            placeholder="Enter your last name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="popup-field">
+                                    <div class="title"><span>*</span> Email</div>
+                                    <div>
+                                        <input type="email" id="email" name="email"
+                                            placeholder="Enter your current email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="popup-field">
+                                    <div class="title"><span>*</span> Phone Number</div>
+                                    <div>
+                                        <input type="text" id="phone" name="phone"
+                                            placeholder="Enter your current phone number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="popup-field">
+                                    <div class="title"><span>*</span> Your Resume</div>
+                                    <div>
+                                        <label for="upload-file" class="upload-label">
+                                            <div class="icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48"
+                                                    viewBox="0 0 49 48" fill="none">
+                                                    <g clip-path="url(#clip0_5341_4417)">
+                                                        <path d="M32.5 32L24.5 24L16.5 32" stroke="#ADB2BA"
+                                                            stroke-width="3" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M24.5 24V42" stroke="#ADB2BA" stroke-width="3"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path
+                                                            d="M41.2828 36.78C43.2335 35.7165 44.7745 34.0337 45.6626 31.9972C46.5507 29.9607 46.7353 27.6864 46.1873 25.5333C45.6392 23.3803 44.3898 21.471 42.6362 20.1069C40.8826 18.7427 38.7246 18.0014 36.5028 18H33.9829C33.3775 15.6585 32.2492 13.4846 30.6827 11.642C29.1163 9.79927 27.1525 8.33567 24.939 7.36118C22.7256 6.3867 20.32 5.92669 17.9031 6.01573C15.4862 6.10478 13.121 6.74057 10.9852 7.8753C8.84942 9.01003 6.99867 10.6142 5.57209 12.5671C4.14552 14.5201 3.18023 16.771 2.74881 19.1508C2.31739 21.5305 2.43106 23.977 3.08128 26.3065C3.73149 28.6359 4.90133 30.7877 6.50285 32.6"
+                                                            stroke="#ADB2BA" stroke-width="3" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path d="M32.5 32L24.5 24L16.5 32" stroke="#ADB2BA"
+                                                            stroke-width="3" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_5341_4417">
+                                                            <rect width="48" height="48" fill="white"
+                                                                transform="translate(0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="content">
+                                                <div class="top">
+                                                    <span>Browse File </span>or drop here
+                                                </div>
+                                                <div class="bot">
+                                                    txt, docx, pdf format available. Max file size 5 MB.
+                                                </div>
+                                            </div>
+                                            <input type="file" id="upload-file" name="file">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="popup-field">
+                                    <div class="title">Cover Letter (optional)</div>
+                                    <div class="textarea">
+                                        <textarea id="letter-cover" name="letter-cover" placeholder=" Let the employers know who you are..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="popup-field">
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="dropdown-group" class="check checkbox-custom" id="agree" value="1">
+                                        <label for="agree" class="checkbox-custom-label">I agree to the Privacy Policy.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="group-btn">
+                                    <button class="btn btn-secondary close">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="popup-thank active">
+            <div class="popup-thank-container">
+                <div class="popup-thank-wrap">
+                    <div class="popup-close close">
+                        <img src="./assets/images/X.svg" alt="close icon">
+                    </div>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="101" height="100" viewBox="0 0 101 100" fill="none">
+                            <path d="M2.5 50C2.5 23.4903 23.9903 2 50.5 2C77.0097 2 98.5 23.4903 98.5 50C98.5 76.5097 77.0097 98 50.5 98C23.9903 98 2.5 76.5097 2.5 50Z" stroke="#009BAB" stroke-width="4"/>
+                            <path d="M43.6547 60.5992L35.2558 52.2003C34.3199 51.2644 32.8321 51.2644 31.8962 52.2003C30.9604 53.1362 30.9604 54.624 31.8962 55.5598L41.9509 65.6145C42.8868 66.5504 44.3986 66.5504 45.3345 65.6145L70.7712 40.2019C71.7071 39.266 71.7071 37.7782 70.7712 36.8423C69.8353 35.9064 68.3475 35.9064 67.4116 36.8423L43.6547 60.5992Z" fill="#009BAB"/>
+                        </svg>
+                    </div>
+                    <div class="title">Thank You For Applying</div>
+                    <div class="desc">We appreciate your interest in joining our company. Your application is currently under review. We will contact you if your qualifications align with the position.</div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="detail-head">
             <div class="container">
                 <div class="detail-header">
@@ -44,11 +183,11 @@
                         <div>Back To Search</div>
                     </a>
                     <div class="breadcrumb">
-                        <div>Home</div> 
-                        / 
-                        <div>Medical</div> 
-                        / 
-                        <div>Job Detail</div> 
+                        <div>Home</div>
+                        /
+                        <div>Medical</div>
+                        /
+                        <div>Job Detail</div>
                     </div>
                 </div>
             </div>
@@ -92,7 +231,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn-secondary">
+                            <button class="btn btn-secondary btn-popup">
                                 <span>Apply Now</span>
                                 <img src="./assets/images/fi_arrow-right.svg" alt="fi_arrow-right icon">
                             </button>
@@ -193,7 +332,15 @@
                             <h2 class="title">Job Description</h2>
                             <div class="desc">
                                 <p>
-                                    Integer aliquet pretium consequat. Donec et sapien id leo accumsan pellentesque eget maximus tellus. Duis et est ac leo rhoncus tincidunt vitae vehicula augue. Donec in suscipit diam. Pellentesque quis justo sit amet arcu commodo sollicitudin. Integer finibus blandit condimentum. Vivamus sit amet ligula ullamcorper, pulvinar ante id, tristique erat. Quisque sit amet aliquam urna. Maecenas blandit felis id massa sodales finibus. Integer bibendum eu nulla eu sollicitudin. Sed lobortis diam tincidunt accumsan faucibus. Quisque blandit augue quis turpis auctor, dapibus euismod ante ultricies. Ut non felis lacinia turpis feugiat euismod at id magna. Sed ut orci arcu. Suspendisse sollicitudin faucibus aliquet.
+                                    Integer aliquet pretium consequat. Donec et sapien id leo accumsan pellentesque eget
+                                    maximus tellus. Duis et est ac leo rhoncus tincidunt vitae vehicula augue. Donec in
+                                    suscipit diam. Pellentesque quis justo sit amet arcu commodo sollicitudin. Integer
+                                    finibus blandit condimentum. Vivamus sit amet ligula ullamcorper, pulvinar ante id,
+                                    tristique erat. Quisque sit amet aliquam urna. Maecenas blandit felis id massa
+                                    sodales finibus. Integer bibendum eu nulla eu sollicitudin. Sed lobortis diam
+                                    tincidunt accumsan faucibus. Quisque blandit augue quis turpis auctor, dapibus
+                                    euismod ante ultricies. Ut non felis lacinia turpis feugiat euismod at id magna. Sed
+                                    ut orci arcu. Suspendisse sollicitudin faucibus aliquet.
                                 </p>
                             </div>
                         </div>
@@ -201,12 +348,15 @@
                             <h2 class="title">Responsibilities</h2>
                             <div class="desc">
                                 <p>
-                                    Nam dapibus consectetur erat in euismod. Cras urna augue, mollis venenatis augue sed, porttitor aliquet nibh. Sed tristique dictum elementum. Nulla imperdiet sit amet quam eget lobortis. Etiam in neque sit amet orci interdum tincidunt.
+                                    Nam dapibus consectetur erat in euismod. Cras urna augue, mollis venenatis augue
+                                    sed, porttitor aliquet nibh. Sed tristique dictum elementum. Nulla imperdiet sit
+                                    amet quam eget lobortis. Etiam in neque sit amet orci interdum tincidunt.
                                 </p>
                                 <ul>
                                     <li>Curabitur blandit lorem velit, vitae pretium leo placerat eget.</li>
                                     <li>Morbi mattis in ipsum ac tempus.</li>
-                                    <li>Curabitur eu vehicula libero. Vestibulum sed purus ullamcorper, lobortis lectus nec.</li>
+                                    <li>Curabitur eu vehicula libero. Vestibulum sed purus ullamcorper, lobortis lectus
+                                        nec.</li>
                                     <li>vulputate turpis. Quisque ante odio, iaculis a porttitor sit amet.</li>
                                     <li>lobortis vel lectus. Nulla at risus ut diam.</li>
                                     <li>commodo feugiat. Nullam laoreet, diam placerat dapibus tincidunt.</li>
@@ -221,7 +371,8 @@
                                 <ul>
                                     <li>Curabitur blandit lorem velit, vitae pretium leo placerat eget.</li>
                                     <li>Morbi mattis in ipsum ac tempus.</li>
-                                    <li>Curabitur eu vehicula libero. Vestibulum sed purus ullamcorper, lobortis lectus nec.</li>
+                                    <li>Curabitur eu vehicula libero. Vestibulum sed purus ullamcorper, lobortis lectus
+                                        nec.</li>
                                     <li>vulputate turpis. Quisque ante odio, iaculis a porttitor sit amet.</li>
                                     <li>lobortis vel lectus. Nulla at risus ut diam.</li>
                                     <li>commodo feugiat. Nullam laoreet, diam placerat dapibus tincidunt.</li>
@@ -321,7 +472,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary btn-popup">
                         <span>Apply now</span>
                         <img src="./assets/images/fi_arrow-right-white.svg" alt="fi_arrow-right icon">
                     </button>
@@ -340,7 +491,8 @@
                                 <img src="./assets/images/HMSG_Logo_Eng_Vertical.png" alt="hoanmy logo">
                             </div>
                             <div class="job-content">
-                                <div class="job-title">Laboratory Technician (Medical Laboratory Technician, Phlebotomist)</div>
+                                <div class="job-title">Laboratory Technician (Medical Laboratory Technician,
+                                    Phlebotomist)</div>
                                 <div class="job-detail-mb">
                                     <div>
                                         <img src="./assets/images/fi_map-pin.svg" alt="map icon">
@@ -376,7 +528,8 @@
                                 <img src="./assets/images/HMSG_Logo_Eng_Vertical.png" alt="hoanmy logo">
                             </div>
                             <div class="job-content">
-                                <div class="job-title">Laboratory Technician (Medical Laboratory Technician, Phlebotomist)</div>
+                                <div class="job-title">Laboratory Technician (Medical Laboratory Technician,
+                                    Phlebotomist)</div>
                                 <div class="job-detail-mb">
                                     <div>
                                         <img src="./assets/images/fi_map-pin.svg" alt="map icon">
@@ -412,7 +565,8 @@
                                 <img src="./assets/images/HMSG_Logo_Eng_Vertical.png" alt="hoanmy logo">
                             </div>
                             <div class="job-content">
-                                <div class="job-title">Laboratory Technician (Medical Laboratory Technician, Phlebotomist)</div>
+                                <div class="job-title">Laboratory Technician (Medical Laboratory Technician,
+                                    Phlebotomist)</div>
                                 <div class="job-detail-mb">
                                     <div>
                                         <img src="./assets/images/fi_map-pin.svg" alt="map icon">
@@ -444,7 +598,7 @@
                     </a>
                 </div>
                 <div class="otherJob-bot">
-                    <button class="btn btn-primary">View all Jobs</button>
+                    <a href="./detail.html" class="btn btn-primary">View all Jobs</a>
                 </div>
             </div>
         </section>
@@ -474,4 +628,5 @@
 <!-- js -->
 <script src="./assets/js/main.js"></script>
 <script src="./assets/js/home.js"></script>
+
 </html>

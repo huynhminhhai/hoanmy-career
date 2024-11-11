@@ -685,6 +685,7 @@ input[type="checkbox"]:checked::after {
     font-weight: 400;
     line-height: 20px;
     color: #9199A3;
+    flex-wrap: wrap;
 }
 
 .career .career-item .job-desc>div {
@@ -752,6 +753,7 @@ input[type="checkbox"]:checked::after {
     font-weight: 400;
     line-height: 20px;
     color: #C8CCD1;
+    cursor: pointer;
 }
 
 .career .pagination-container .pagi-page.active {

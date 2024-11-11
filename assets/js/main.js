@@ -137,4 +137,27 @@ $(document).ready(function () {
             $icon.removeClass('rotate');
         }
     });
+
+    // popup
+
+    $('.btn-popup').click(function(){
+        $('.popup-blur').addClass('active')
+        $('.popup-form').addClass('active')
+    });
+
+    $('.popup-form .close').click(function() {
+        $('.popup-blur').removeClass('active')
+        $('.popup-form').removeClass('active')
+    })
+
+    $('.popup-thank .close').click(function() {
+        $('.popup-blur').removeClass('active')
+        $('.popup-thank').removeClass('active')
+    })
+
+    $('.popup-blur').click(function() {
+        $(this).removeClass('active')
+        $('.popup-thank').removeClass('active')
+        $('.popup-form').removeClass('active')
+    })
 });
