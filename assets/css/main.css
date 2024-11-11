@@ -898,6 +898,10 @@ input[type="checkbox"]:checked::after {
     display: none;
 }
 
+.component-dropdown-newtwork {
+    display: none;
+}
+
 @media screen and (max-width: 576px) {
 
     .career-list-mb {
@@ -1081,12 +1085,23 @@ input[type="checkbox"]:checked::after {
         width: 100%;
     }
 
+    .career .career-filter-footer-mb {
+        display: block;
+    }
+
+    .career .career-filter-body {
+        flex: 1;
+        max-height: calc(100vh - 185px);
+        overflow-y: auto;
+    }
+
     .career .career-filter-header-mb {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 24px;
         background-color: #fff;
+        border-bottom: 1px solid #f8f8f8;
     }
 
     .career .career-filter-header-mb  .title {

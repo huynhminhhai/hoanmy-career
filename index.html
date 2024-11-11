@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="career-result">
-                    <form class="career-filter active">
+                    <form class="career-filter">
                         <div class="career-filter-header-mb">
                             <div></div>
                             <div class="title">Filter</div>
@@ -186,221 +186,223 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="filter-item category">
-                            <div class="filter-item-top">
-                                <div class="filter-heading">
-                                    Job Category
-                                </div>
-                                <div>
-                                    <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
-                                        alt="chevron-up icon">
-                                </div>
-                            </div>
-                            <div class="filter-item-bottom">
-                                <div class="filter-bottom-list">
-                                    <div>
-                                        <input type="radio" id="all" name="category" value="all" checked>
-                                        <label for="all">All</label>
+                        <div class="career-filter-body">
+                            <div class="filter-item category">
+                                <div class="filter-item-top">
+                                    <div class="filter-heading">
+                                        Job Category
                                     </div>
                                     <div>
-                                        <input type="radio" id="medical" name="category" value="medical">
-                                        <label for="medical">Medical</label>
-                                    </div>
-                                    <div>
-                                        <input type="radio" id="non-medical" name="category" value="non-medical">
-                                        <label for="non-medical">Non-Medical</label>
+                                        <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
+                                            alt="chevron-up icon">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="filter-item location">
-                            <div class="filter-item-top">
-                                <div class="filter-heading">
-                                    Location
-                                </div>
-                                <div>
-                                    <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
-                                        alt="chevron-up icon">
-                                </div>
-                            </div>
-                            <div class="filter-item-bottom">
-                                <div class="filter-bottom-list">
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_1" name="location_1" value="ho chi minh">
-                                        <label for="location_1">Ho Chi Minh</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_2" name="location_2" value="can tho">
-                                        <label for="location_2">Can Tho</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_3" name="location_3" value="lam dong">
-                                        <label for="location_3">Lam Dong</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_4" name="location_4" value="da nang">
-                                        <label for="location_4">Da Nang</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_5" name="location_5" value="Dong Nai">
-                                        <label for="location_5">Dong Nai</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_6" name="location_6" value="Nghe An">
-                                        <label for="location_6">Nghe An</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_7" name="location_7" value="Ca Mau">
-                                        <label for="location_7">Ca Mau</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="location_8" name="location_8" value="Binh Duong">
-                                        <label for="location_8">Binh Duong</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="filter-item network">
-                            <div class="filter-item-top">
-                                <div class="filter-heading">
-                                    Network
-                                </div>
-                                <div>
-                                    <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
-                                        alt="chevron-up icon">
-                                </div>
-                            </div>
-                            <div class="filter-item-bottom">
-                                <div class="filter-bottom-list">
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="network_1" name="network_1"
-                                            value="Hoan My Medical Corporation">
-                                        <label for="network_1">Hoan My Medical Corporation</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="network_2" name="network_2"
-                                            value="Hoan My Sai Gon Hospital">
-                                        <label for="network_2">Hoan My Sai Gon Hospital</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="network_3" name="network_3"
-                                            value="Hoan My Thu Duc Hospital">
-                                        <label for="network_3">Hoan My Thu Duc Hospital</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="network_4" name="network_4"
-                                            value="Hoan My Da Nang Hospital">
-                                        <label for="network_4">Hoan My Da Nang Hospital</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="network_5" name="network_5"
-                                            value="Hoan My Cuu Long Hospital">
-                                        <label for="network_5">Hoan My Cuu Long Hospital</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="network_6" name="network_6"
-                                            value="Hoan My Da Lat Hospital">
-                                        <label for="network_6">Hoan My Da Lat Hospital</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="network_7" name="network_7"
-                                            value="Hoan My Dong Nai Hospital">
-                                        <label for="network_7">Hoan My Dong Nai Hospital</label>
-                                    </div>
-                                    <div class="show-more-filter">Show more...</div>
-                                </div>
-                                <div class="search-dropdown">
-                                    <div class="dropdown dropdown-network default">
+                                <div class="filter-item-bottom">
+                                    <div class="filter-bottom-list">
                                         <div>
-                                            <img class="logo-location" src="./assets/images/search-location.svg"
-                                                alt="location logo">
+                                            <input type="radio" id="all" name="category" value="all" checked>
+                                            <label for="all">All</label>
                                         </div>
-                                        <div class="dropdown-label"></div>
                                         <div>
-                                            <img class="logo-dropdown d-none" src="./assets/images/search-dropdown.svg"
-                                                alt="dropdown cion">
-                                            <img class="logo-close d-block" src="./assets/images/close-dropdown.svg"
-                                                alt="close icon">
+                                            <input type="radio" id="medical" name="category" value="medical">
+                                            <label for="medical">Medical</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="non-medical" name="category" value="non-medical">
+                                            <label for="non-medical">Non-Medical</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="component-dropdown-newtwork">
-                                    <div class="component-dropdown-network--container">
-                                        <div class="top">
-                                            <div class="back">
-                                                <img src="./assets/images/ArrowLeft.svg" alt="ArrowLeft icon">
+                            </div>
+                            <div class="filter-item location">
+                                <div class="filter-item-top">
+                                    <div class="filter-heading">
+                                        Location
+                                    </div>
+                                    <div>
+                                        <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
+                                            alt="chevron-up icon">
+                                    </div>
+                                </div>
+                                <div class="filter-item-bottom">
+                                    <div class="filter-bottom-list">
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_1" name="location_1" value="ho chi minh">
+                                            <label for="location_1">Ho Chi Minh</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_2" name="location_2" value="can tho">
+                                            <label for="location_2">Can Tho</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_3" name="location_3" value="lam dong">
+                                            <label for="location_3">Lam Dong</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_4" name="location_4" value="da nang">
+                                            <label for="location_4">Da Nang</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_5" name="location_5" value="Dong Nai">
+                                            <label for="location_5">Dong Nai</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_6" name="location_6" value="Nghe An">
+                                            <label for="location_6">Nghe An</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_7" name="location_7" value="Ca Mau">
+                                            <label for="location_7">Ca Mau</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="location_8" name="location_8" value="Binh Duong">
+                                            <label for="location_8">Binh Duong</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-item network">
+                                <div class="filter-item-top">
+                                    <div class="filter-heading">
+                                        Network
+                                    </div>
+                                    <div>
+                                        <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
+                                            alt="chevron-up icon">
+                                    </div>
+                                </div>
+                                <div class="filter-item-bottom">
+                                    <div class="filter-bottom-list">
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="network_1" name="network_1"
+                                                value="Hoan My Medical Corporation">
+                                            <label for="network_1">Hoan My Medical Corporation</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="network_2" name="network_2"
+                                                value="Hoan My Sai Gon Hospital">
+                                            <label for="network_2">Hoan My Sai Gon Hospital</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="network_3" name="network_3"
+                                                value="Hoan My Thu Duc Hospital">
+                                            <label for="network_3">Hoan My Thu Duc Hospital</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="network_4" name="network_4"
+                                                value="Hoan My Da Nang Hospital">
+                                            <label for="network_4">Hoan My Da Nang Hospital</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="network_5" name="network_5"
+                                                value="Hoan My Cuu Long Hospital">
+                                            <label for="network_5">Hoan My Cuu Long Hospital</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="network_6" name="network_6"
+                                                value="Hoan My Da Lat Hospital">
+                                            <label for="network_6">Hoan My Da Lat Hospital</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="network_7" name="network_7"
+                                                value="Hoan My Dong Nai Hospital">
+                                            <label for="network_7">Hoan My Dong Nai Hospital</label>
+                                        </div>
+                                        <div class="show-more-filter">Show more...</div>
+                                    </div>
+                                    <div class="search-dropdown">
+                                        <div class="dropdown dropdown-network default">
+                                            <div>
+                                                <img class="logo-location" src="./assets/images/search-location.svg"
+                                                    alt="location logo">
+                                            </div>
+                                            <div class="dropdown-label"></div>
+                                            <div>
+                                                <img class="logo-dropdown d-none" src="./assets/images/search-dropdown.svg"
+                                                    alt="dropdown cion">
+                                                <img class="logo-close d-block" src="./assets/images/close-dropdown.svg"
+                                                    alt="close icon">
                                             </div>
                                         </div>
-                                        <div class="search-dropdown-wrap">
-                                            <div class="search-dropdown">
-                                                <div class="dropdown dropdown-network">
-                                                    <div>
-                                                        <img class="logo-location" src="./assets/images/search-location.svg"
-                                                            alt="location logo">
-                                                    </div>
-                                                    <div class="dropdown-label">Preferred Location</div>
-                                                    <div class="dropdown-list">
+                                    </div>
+                                    <div class="component-dropdown-newtwork">
+                                        <div class="component-dropdown-network--container">
+                                            <div class="top">
+                                                <div class="back">
+                                                    <img src="./assets/images/ArrowLeft.svg" alt="ArrowLeft icon">
+                                                </div>
+                                            </div>
+                                            <div class="search-dropdown-wrap">
+                                                <div class="search-dropdown">
+                                                    <div class="dropdown dropdown-network">
                                                         <div>
-                                                            <div class="checkbox">
-                                                                <input class="check checkbox-custom" type="checkbox" id="checkbox-network-1" name="checkbox-network-1"
-                                                                    value="Hoan My Sai Gon Hospital">
-                                                                <label for="checkbox-network-1" class="checkbox-custom-label">Hoan My Sai Gon Hospital</label>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <input class="check checkbox-custom" type="checkbox" id="checkbox-network-2" name="checkbox-network-2"
-                                                                    value="Hoan My Medical Corporation">
-                                                                <label for="checkbox-network-2" class="checkbox-custom-label">Hoan My Medical Corporation</label>
-                                                            </div>
-                                                            <div class="checkbox">
-                                                                <input class="check checkbox-custom" type="checkbox" id="checkbox-network-3" name="checkbox-network-3"
-                                                                    value="Hoan My Thu Duc Hospital">
-                                                                <label for="checkbox-network-3" class="checkbox-custom-label">Hoan My Thu Duc Hospital</label>
+                                                            <img class="logo-location" src="./assets/images/search-location.svg"
+                                                                alt="location logo">
+                                                        </div>
+                                                        <div class="dropdown-label">Preferred Location</div>
+                                                        <div class="dropdown-list">
+                                                            <div>
+                                                                <div class="checkbox">
+                                                                    <input class="check checkbox-custom" type="checkbox" id="checkbox-network-1" name="checkbox-network-1"
+                                                                        value="Hoan My Sai Gon Hospital">
+                                                                    <label for="checkbox-network-1" class="checkbox-custom-label">Hoan My Sai Gon Hospital</label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <input class="check checkbox-custom" type="checkbox" id="checkbox-network-2" name="checkbox-network-2"
+                                                                        value="Hoan My Medical Corporation">
+                                                                    <label for="checkbox-network-2" class="checkbox-custom-label">Hoan My Medical Corporation</label>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <input class="check checkbox-custom" type="checkbox" id="checkbox-network-3" name="checkbox-network-3"
+                                                                        value="Hoan My Thu Duc Hospital">
+                                                                    <label for="checkbox-network-3" class="checkbox-custom-label">Hoan My Thu Duc Hospital</label>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div>
-                                                        <img class="logo-dropdown" src="./assets/images/search-dropdown.svg"
-                                                            alt="dropdown cion">
-                                                        <img class="logo-close" src="./assets/images/close-dropdown.svg"
-                                                            alt="close icon">
+                                                        <div>
+                                                            <img class="logo-dropdown" src="./assets/images/search-dropdown.svg"
+                                                                alt="dropdown cion">
+                                                            <img class="logo-close" src="./assets/images/close-dropdown.svg"
+                                                                alt="close icon">
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="bot">
-                                            <button class="btn btn-primary back">Done</button>
+                                            <div class="bot">
+                                                <div class="btn btn-primary back">Done</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="filter-item type">
-                            <div class="filter-item-top">
-                                <div class="filter-heading">
-                                    Job Type
+                            <div class="filter-item type">
+                                <div class="filter-item-top">
+                                    <div class="filter-heading">
+                                        Job Type
+                                    </div>
+                                    <div>
+                                        <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
+                                            alt="chevron-up icon">
+                                    </div>
                                 </div>
-                                <div>
-                                    <img class="filter-icon-up" src="./assets/images/fi_chevron-up.svg"
-                                        alt="chevron-up icon">
-                                </div>
-                            </div>
-                            <div class="filter-item-bottom">
-                                <div class="filter-bottom-list">
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="type_1" name="type_1" value="All">
-                                        <label for="type_1">All</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="type_2" name="type_2" value="Full Time">
-                                        <label for="type_2">Full Time</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="type_3" name="type_3" value="Part Time">
-                                        <label for="type_3">Part Time</label>
-                                    </div>
-                                    <div class="group-checkbox">
-                                        <input type="checkbox" id="type_4" name="type_4" value="Contact Base">
-                                        <label for="type_4">Contact Base</label>
+                                <div class="filter-item-bottom">
+                                    <div class="filter-bottom-list">
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="type_1" name="type_1" value="All">
+                                            <label for="type_1">All</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="type_2" name="type_2" value="Full Time">
+                                            <label for="type_2">Full Time</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="type_3" name="type_3" value="Part Time">
+                                            <label for="type_3">Part Time</label>
+                                        </div>
+                                        <div class="group-checkbox">
+                                            <input type="checkbox" id="type_4" name="type_4" value="Contact Base">
+                                            <label for="type_4">Contact Base</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
