@@ -311,7 +311,7 @@ $(document).ready(function () {
         var file = this.files[0];
         if (file) {
             $('.upload-label .top').text(file.name);
-            $('.upload-label .bot').text('Size: ' + (file.size / 1024).toFixed(2) + ' KB');
+            $('.upload-label .bot').text((file.size / (1024 * 1024)).toFixed(2) + ' MB');
 
             // Change icon after file upload
             $('.upload-label .icon .pending').toggle()

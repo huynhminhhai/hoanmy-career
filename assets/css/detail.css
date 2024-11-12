@@ -380,7 +380,7 @@
     transform: translate(-50%, -50%);
     z-index: 3;
     background-color: #fff;
-    padding: 56px 32px;
+    padding: 56px 32px 32px;
     min-width: 732px;
     border-radius: 12px;
     opacity: 0;
@@ -614,7 +614,8 @@
 }
 
 .popup-thank .btn-group .btn {
-    padding: 16px 48px;
+    padding: 12px 24px;
+    width: 160px;
 }
 
 @media screen and (max-width: 576px) {
@@ -680,6 +681,7 @@
     }
 
     .popup-thank .btn-group .btn {
-        padding: 16px 56px;
+        padding: 12px 56px;
+        width: 160px;
     }
 }
