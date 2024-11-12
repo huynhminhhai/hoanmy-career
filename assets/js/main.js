@@ -1,5 +1,16 @@
 $(document).ready(function () {
 
+    $('.keyword-text').click(function() {
+        $(this).toggleClass('open')
+    })
+
+
+    $(document).on('click touchstart', (e) => {
+        if (!$(e.target).closest($('.keyword-text')).length) {
+            $('.keyword-text').removeClass('open');
+        }
+    });
+
     // hero
 
     let resultCheckbox = [

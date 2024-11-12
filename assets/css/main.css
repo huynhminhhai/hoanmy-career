@@ -97,7 +97,7 @@ a {
 h3,
 h2,
 h1 {
-    font-family: 'SFD-Bold', sans-serif;
+    font-family: 'Lexend', sans-serif;
 }
 
 @media screen and (min-width: 1200px) {
@@ -368,6 +368,7 @@ input[type="checkbox"]:checked::after {
     line-height: 20px;
     font-weight: 400;
     color: #9199A3;
+    margin-left: 4px;
 }
 
 .hero .search-dropdown .logo-location,
@@ -517,6 +518,26 @@ input[type="checkbox"]:checked::after {
     cursor: pointer;
 }
 
+.hero .search-text {
+    position: relative;
+}
+
+.hero .search-text::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 32px;
+    background: #E4E5E8;
+    position: absolute;
+    top: 50%;
+    right: -3px;
+    transform: translateY(-50%);
+}
+
+.hero .search-text .keyword-text.open {
+    border: 1px solid var(--primary-500);
+}
+
 .hero .keyword-text {
     display: flex;
     align-items: center;
@@ -524,6 +545,7 @@ input[type="checkbox"]:checked::after {
     width: 420px;
     padding: 8px 16px 8px 14px;
     border-radius: 8px;
+    border: 1px solid #fff;
 }
 
 .hero .keyword-text input {
@@ -533,6 +555,7 @@ input[type="checkbox"]:checked::after {
     font-weight: 400;
     color: #9199A3;
     outline: none;
+    flex: 1;
 }
 
 .hero .keyword-text input::placeholder {
@@ -610,6 +633,7 @@ input[type="checkbox"]:checked::after {
     width: 312px;
     border-radius: 8px;
     height: fit-content;
+    border: 1px solid #E4E5E8;
 }
 
 .career .career-filter .filter-item {
@@ -684,6 +708,13 @@ input[type="checkbox"]:checked::after {
     padding: 32px;
     background-color: #fff;
     border-radius: 8px;
+    border: 1px solid #E4E5E8;
+    transition: all 0.3s linear;
+}
+
+.career .career-item:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0, 62, 68, 0.10);
+    transition: all 0.3s linear;
 }
 
 .career .career-item .logo {

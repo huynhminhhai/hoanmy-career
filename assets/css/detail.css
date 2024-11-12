@@ -4,7 +4,6 @@
 }
 
 .detail {
-    padding: 0px 0 80px;
     background-color: #f8f8f8;
 }
 
@@ -181,6 +180,17 @@
 
 /* otherJob */
 
+.career-list-mb-top {
+    height: 84px;
+    align-items: center;
+}
+
+.career-list-mb .job-detail-mb img {
+    width: 18px;
+    height: auto;
+    object-fit: contain;
+}
+
 .otherJob {
     padding: 32px 0 80px;
     background-color: #f8f8f8;
@@ -221,10 +231,15 @@
     gap: 24px;
 }
 
+.career-list-mb-item {
+    flex: 1;
+}
+
 
 .career-list-mb {
     display: flex;
     flex-direction: row;
+    gap: 24px;
 }
 
 .otherJob .otherJob-bot {
@@ -460,8 +475,12 @@
     font-weight: 400;
     line-height: 16px;
     color: #474C54;
-
     width: 100%;
+}
+
+.popup-form .popup-field input:not([type='checkbox']):focus,
+.popup-form .popup-field textarea:focus {
+    border: 1px solid var(--primary-500);
 }
 
 .popup-form .popup-field textarea {
