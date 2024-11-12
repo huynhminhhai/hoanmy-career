@@ -256,8 +256,13 @@
     }
 
     .detail {
-        background-color: #fff;
+        /* background-color: #fff; */
         padding: 0;
+    }
+
+    .detail .container {
+        background: #fff;
+        border-radius: 16px;
     }
 
     .detail-head .detail-header {
@@ -343,6 +348,7 @@
 
     .detail .detail-content button {
         width: 100%;
+        padding: 12px 24px;
     }
 
     .career-list-mb {

@@ -301,6 +301,12 @@ input[type="checkbox"]:checked::after {
     border: 1px solid var(--primary-500);
 }
 
+@media screen and (max-width: 576px) {
+    .btn {
+        padding: 12px 24px;
+    }
+}
+
 /* hero */
 
 .hero {
@@ -957,6 +963,15 @@ input[type="checkbox"]:checked::after {
 }
 
 @media screen and (max-width: 576px) {
+    
+    .career {
+        padding: 70px 0 80px;
+    }
+
+    .career-list-mb-top {
+        height: 83px;
+        align-items: center;
+    }
 
     .career-list-mb {
         display: flex;
@@ -1133,14 +1148,12 @@ input[type="checkbox"]:checked::after {
     .career .career-filter-footer-mb {
         padding: 24px;
         box-shadow: 0px -8px 16px 0px rgba(0, 62, 68, 0.05);
+        display: block;
+        background-color: #fff;
     }
 
     .career .career-filter-footer-mb .btn {
         width: 100%;
-    }
-
-    .career .career-filter-footer-mb {
-        display: block;
     }
 
     .career .career-filter-body {
