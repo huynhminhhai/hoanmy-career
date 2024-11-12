@@ -21,6 +21,19 @@ $(document).ready(function () {
         }
     ];
 
+    function updateChecked() {
+        $('.filter-item.location .check').each(function() {
+            const checkboxId = $(this).attr('id');
+            const isChecked = resultCheckbox.some(item => item.id === checkboxId);
+            $(this).prop('checked', isChecked);
+        });
+    }
+
+    $('.filter-item.location .group-checkbox').click(function() {
+        updateChecked()
+    })
+
+
     $('.dropdown.dropdown-location').each((i, element) => {
 
         const $el = $(element);
@@ -30,6 +43,7 @@ $(document).ready(function () {
         // Function to update the dropdown label
         function updateLabel() {
             checkResult()
+            updateChecked()
 
             $label.empty(); // Clear current label content
             if (resultCheckbox.length) {
