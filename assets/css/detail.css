@@ -435,7 +435,16 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    width: fit-content;
 }
+
+.popup-form .popup-field .checkbox label {
+    cursor: pointer;
+}
+
+.popup-form .popup-field .checkbox:hover input[type='checkbox'] {
+    border: 1px solid var(--primary-500);
+} 
 
 .popup-form .popup-field input:not([type='checkbox']),
 .popup-form .popup-field textarea {
@@ -520,7 +529,7 @@
 }
 
 .popup-form .group-btn button[type=submit] {
-    padding: 16px 48px;
+    width: 160px;
 }
 
 .popup-form .popup-form-container {
