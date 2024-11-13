@@ -359,7 +359,7 @@
 
     .detail .detail-body .desc ul {
         list-style-position: outside;
-        padding-left: 16px;
+        padding-left: 26px;
     }
 
     .detail .detail-button {
@@ -399,7 +399,7 @@
     z-index: 3;
     background-color: #fff;
     padding: 56px 32px 32px;
-    min-width: 712px;
+    min-width: 732px;
     border-radius: 12px;
     opacity: 0;
     visibility: hidden;
@@ -408,6 +408,7 @@
 
 .popup-thank {
     min-height: 500px;
+    min-width: 712px;
     display: flex;
     align-items: center;
 }
