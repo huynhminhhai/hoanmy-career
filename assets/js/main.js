@@ -367,4 +367,10 @@ $(document).ready(function () {
         $('.component-dropdown-newtwork').addClass('active')
     })
 
+    $('.submit-form').click(function(e) {
+        e.preventDefault()
+        $('.popup-form ').removeClass('active')
+        $('.popup-thank').addClass('active')
+    })
+
 });
