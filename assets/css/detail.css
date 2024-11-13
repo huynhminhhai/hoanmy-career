@@ -54,6 +54,7 @@
     display: flex;
     flex-direction: column;
     gap: 56px;
+    border-radius: 16px;
 }
 
 .detail .detail-content .logo {
@@ -355,6 +356,23 @@
         flex-direction: column;
         gap: 16px;
     }
+
+    .detail .detail-body .desc ul {
+        list-style-position: outside;
+        padding-left: 16px;
+    }
+
+    .detail .detail-button {
+        /* transition: all 0.3s linear; */
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .detail .detail-button.sticky {
+        position: sticky;
+        bottom: 0;
+        padding: 24px 0;
+    }
 }
 
 
@@ -381,11 +399,17 @@
     z-index: 3;
     background-color: #fff;
     padding: 56px 32px 32px;
-    min-width: 732px;
+    min-width: 712px;
     border-radius: 12px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s linear;
+}
+
+.popup-thank {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
 }
 
 .popup-blur.active,
@@ -568,15 +592,15 @@
 
 .popup-form .popup-form-container::-webkit-scrollbar {
     width: 5px;
-  }
+}
   
 .popup-form .popup-form-container::-webkit-scrollbar-track {
     background: #f1f1f1; 
-  }
+}
    
 .popup-form .popup-form-container::-webkit-scrollbar-thumb {
     background: var(--tertiary-500); 
-  }
+}
 
 .popup-thank .popup-thank-wrap {
     display: flex;
@@ -595,6 +619,7 @@
     font-weight: 600;
     line-height: 44px;
     color: #009BAB;
+    margin-bottom: 16px;
 }
 
 .popup-thank .desc {
@@ -641,7 +666,8 @@
 
     .popup-form .popup-form-container {
         padding: 0;
-        max-height: 90vh;
+        max-height: 86vh;
+        margin-top: 32px;
     }
 
     .popup-form .upload-label {
@@ -654,10 +680,6 @@
 
     .popup-form .group-btn .btn {
         flex: 1;
-    }
-
-    .popup-form .group-btn button[type=submit] {
-        padding: 16px 32px;
     }
 
     .popup-thank {
@@ -683,5 +705,19 @@
     .popup-thank .btn-group .btn {
         padding: 12px 56px;
         width: 160px;
+    }
+
+    .popup-form .popup-form-container::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .popup-form {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 100%);
+    }
+
+    .popup-form.active {
+        transform: translate(-50%, 0%);
     }
 }

@@ -129,6 +129,8 @@ h1 {
 
     text-transform: capitalize;
     width: fit-content;
+    box-shadow: none;
+    outline: none;
 }
 
 .btn.medium {
@@ -139,7 +141,12 @@ h1 {
     padding: 8px 16px;
 }
 
-.btn:hover img {
+.btn-secondary:hover img,
+.btn-secondary:hover img,
+.btn-secondary:focus img,
+.btn-secondary:focus img,
+.btn-secondary:active img,
+.btn-secondary:active img  {
     filter: brightness(0) invert(1);
 }
 
@@ -158,16 +165,25 @@ h1 {
 
 .btn-primary:focus,
 .btn-secondary:focus,
-.btn-white:focus {
+.btn-white:focus,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-white:active {
     border: 1px solid var(--secondary-500);
     background-color: var(--secondary-500);
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    user-select: none;
 }
 
 .btn-secondary {
     border: 1px solid var(--tertiary-500);
     background-color: #fff;
     color: var(--primary-500);
-    transition: all 0.3s linear;
+    /* transition: all 0.3s linear; */
 }
 
 .btn-secondary:hover,
@@ -562,6 +578,7 @@ input[type="checkbox"]:checked::after {
     color: #9199A3;
     outline: none;
     flex: 1;
+    padding: 8px 0;
 }
 
 .hero .keyword-text input::placeholder {
@@ -579,14 +596,15 @@ input[type="checkbox"]:checked::after {
     }
 
     .hero-title {
-        font-size: 18px;
-        line-height: 40px;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
     }
 
     .hero .search {
-        width: 100%;
-        position: relative;
-        top: 40px;
+        width: calc(100% - 48px);
+        position: absolute;
+        bottom: -35px;
     }
 
     .hero .search .search-dropdown,
@@ -595,7 +613,12 @@ input[type="checkbox"]:checked::after {
     }
 
     .hero .search-container {
-        padding: 8px 0;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .hero .search-text::after {
+        display: none;
     }
 
     .hero .keyword-text,
@@ -647,6 +670,10 @@ input[type="checkbox"]:checked::after {
     border-bottom: 1px solid #E4E5E8;
 }
 
+.career .career-filter .filter-item:last-child {
+    border-bottom: 0px;
+}
+
 .career .filter-item-top {
     display: flex;
     align-items: center;
@@ -686,7 +713,7 @@ input[type="checkbox"]:checked::after {
 .career .filter-bottom-list label {
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 20px;
     color: #474C54;
     cursor: pointer;
@@ -720,7 +747,14 @@ input[type="checkbox"]:checked::after {
 
 .career .career-item:hover {
     box-shadow: 0px 8px 16px 0px rgba(0, 62, 68, 0.10);
+    border: 1px solid #E4E5E8;
     transition: all 0.3s linear;
+}
+
+.career .career-item:active,
+.career .career-item:focus {
+    border: 1px solid var(--primary-500);
+    box-shadow: 0px 8px 16px 0px rgba(0, 62, 68, 0.10);
 }
 
 .career .career-item .logo {
@@ -816,10 +850,21 @@ input[type="checkbox"]:checked::after {
     line-height: 20px;
     color: #C8CCD1;
     cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s linear;
+}
+
+.career .pagination-container .pagi-page:hover {
+    border: 1px solid var(--tertiary-500);
+    color: var(--tertiary-500);
+    font-weight: 500;
+    transition: all 0.3s linear;
 }
 
 .career .pagination-container .pagi-page.active {
     background-color: var(--primary-500);
+    border: 1px solid var(--primary-500);
+    font-weight: 500;
     color: #fff;
 }
 
@@ -893,6 +938,17 @@ input[type="checkbox"]:checked::after {
     flex-direction: column;
     gap: 24px;
     border: 1px solid #E4E5E8;
+}
+
+.career-list-mb-item:hover {
+    border: 1px solid #E4E5E8;
+    box-shadow: 0px 8px 16px 0px rgba(0, 62, 68, 0.10);
+}
+
+.career-list-mb-item:active,
+.career-list-mb-item:focus {
+    border: 1px solid var(--primary-500);
+    box-shadow: 0px 8px 16px 0px rgba(0, 62, 68, 0.10);
 }
 
 .career-list-mb-top {
@@ -1181,6 +1237,10 @@ input[type="checkbox"]:checked::after {
 
     /* dropdown */
 
+    .filter-item-bottom .search-dropdown .dropdown.none {
+        border: 1px solid #9199A3;
+    }
+
     .filter-item-bottom .search-dropdown {
         display: block;
     }
@@ -1190,6 +1250,7 @@ input[type="checkbox"]:checked::after {
         line-height: 20px;
         font-weight: 400;
         color: #9199A3;
+        border: 1px solid var(--primary-500);
     }
     
     .filter-item-bottom .search-dropdown .logo-location,

@@ -162,6 +162,7 @@ $(document).ready(function () {
         function updateLabel() {
 
             checkResult()
+            toggleDropdownClass()
 
             $label.empty(); // Clear current label content
             if (resultCheckboxNetwork.length) {
@@ -185,6 +186,7 @@ $(document).ready(function () {
                         // Uncheck the corresponding checkbox
                         $inputs.filter(`[id="${item.id}"]`).prop('checked', false);
                         updateLabel(); // Re-render the label
+                        toggleDropdownClass()
                     });
                 });
             } else {
@@ -256,6 +258,7 @@ $(document).ready(function () {
             $('.dropdown-label').empty().html('<span>Preferred Location</span>');
 
             checkResult()
+            toggleDropdownClass()
 
             // Uncheck all checkboxes in the dropdown
             $('.check').prop('checked', false);
@@ -271,6 +274,25 @@ $(document).ready(function () {
                 $this.prop('checked', isChecked); // Update the checkbox status
             });
         })
+
+        function toggleDropdownClass() {
+            // Get the dropdown element
+            const $dropdown = $('.dropdown.dropdown-network.default');
+            
+            // Get the selected item element
+            const $selectedItem = $('.dropdown.dropdown-network.default .selected-item');
+
+            console.log($selectedItem.length)
+          
+            // Check if the selected item is empty or contains only whitespace
+            if ($selectedItem.length === 0 || $selectedItem.text().trim() === '') {
+              // Add the 'none' class if the selected item is empty
+              $dropdown.addClass('none');
+            } else {
+              // Remove the 'none' class if the selected item is not empty
+              $dropdown.removeClass('none');
+            }
+        }
 
         $('.component-dropdown-newtwork .back').click(function () {
             updateLabel()
@@ -336,13 +358,16 @@ $(document).ready(function () {
     // filter mb
 
     $(window).on('scroll', function () {
-        var careerResultTop = $('.career-result').offset().top;
-        var scrollTop = $(window).scrollTop();
 
-        if (scrollTop >= careerResultTop) {
-            $('.filter-sticky').addClass('active'); // Hiển thị khi phần tử .career-result bị che bởi top của cửa sổ
-        } else {
-            $('.filter-sticky').removeClass('active'); // Ẩn khi phần tử .career-result không bị che
+        if ($('.career-result').length) {
+            var careerResultTop = $('.career-result').offset().top;
+            var scrollTop = $(window).scrollTop();
+    
+            if (scrollTop >= careerResultTop) {
+                $('.filter-sticky').addClass('active'); // Hiển thị khi phần tử .career-result bị che bởi top của cửa sổ
+            } else {
+                $('.filter-sticky').removeClass('active'); // Ẩn khi phần tử .career-result không bị che
+            }
         }
     });
 
@@ -372,5 +397,67 @@ $(document).ready(function () {
         $('.popup-form ').removeClass('active')
         $('.popup-thank').addClass('active')
     })
+
+
+    // Function to remove active class from all pages
+    function removeActiveClass() {
+        $('.pagi-page').removeClass('active');
+    }
+
+    // Add click event to each page
+    $('.pagi-page').each(function() {
+        $(this).on('click', function() {
+            removeActiveClass();
+            $(this).addClass('active');
+        });
+    });
+
+    // Add event listener for prev button
+    $('.pagi-prev').on('click', function() {
+        const $activePage = $('.pagi-page.active');
+        if ($activePage.length) {
+            const $prevPage = $activePage.prev('.pagi-page');
+            if ($prevPage.length) {
+                removeActiveClass();
+                $prevPage.addClass('active');
+            }
+        }
+    });
+
+    // Add event listener for next button
+    $('.pagi-next').on('click', function() {
+        const $activePage = $('.pagi-page.active');
+        if ($activePage.length) {
+            const $nextPage = $activePage.next('.pagi-page');
+            if ($nextPage.length) {
+                removeActiveClass();
+                $nextPage.addClass('active');
+            }
+        }
+    });
+
+    // button detail
+
+    var $button = $('.detail-content .detail-button');
+    var $section = $('.detail')
+
+    if ($section.length && $button.length) {
+        var sectionTop = $section.offset().top;
+        var buttonDefaultTop = $button.offset().top;
+        var buttonHeight = $button.outerHeight();
+        var windowHeight = $(window).height();
+    
+        $(window).scroll(function() {
+          var scrollPos = $(window).scrollTop();
+          var bottomScreenPos = scrollPos + windowHeight;
+          
+          // Kiểm tra nếu scroll đến hoặc vượt qua section và bottom của màn hình chưa đến vị trí ban đầu của button
+          if (scrollPos >= sectionTop && bottomScreenPos < buttonDefaultTop + buttonHeight) {
+            $button.addClass('sticky');
+          } else {
+            $button.removeClass('sticky');
+          }
+        });
+    }
 
 });
