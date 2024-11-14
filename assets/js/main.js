@@ -1,9 +1,24 @@
 $(document).ready(function () {
 
+    if ($(window).width() >= 576) {
+        if ($('.filter-item.network').length){
+            $('.filter-item.network .filter-bottom-list .group-checkbox').slice(10).hide();
+
+            // Xử lý sự kiện click của nút "Show more"
+            $('.show-more-filter').css('cursor', 'pointer');
+            $('.show-more-filter').click(function() {
+                // Hiển thị tất cả các checkbox còn lại
+                $('.filter-bottom-list .group-checkbox').slice(10).slideDown();
+                
+                // Ẩn nút sau khi đã hiển thị các checkbox
+                $(this).hide();
+            });
+        }
+    }
+
     $('.keyword-text').click(function() {
         $(this).toggleClass('open')
     })
-
 
     $(document).on('click touchstart', (e) => {
         if (!$(e.target).closest($('.keyword-text')).length) {

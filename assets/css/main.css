@@ -1167,7 +1167,8 @@ input[type="checkbox"]:checked::after {
         display: none;
     }
 
-    .career .career-filter .filter-item.category .filter-bottom-list {
+    .career .career-filter .filter-item.category .filter-bottom-list,
+    .career .career-filter .filter-item.type .filter-bottom-list {
         flex-direction: row;
         gap: 16px;
     }
@@ -1182,8 +1183,8 @@ input[type="checkbox"]:checked::after {
         display: none;
     }
 
-    .career .filter-item.location .filter-bottom-list label,
-    .career .filter-item.type .filter-bottom-list label
+    .career .filter-item.location .filter-bottom-list label
+    /* .career .filter-item.type .filter-bottom-list label */
      {
         display: inline-flex;
         padding: 8px 16px;
@@ -1339,6 +1340,7 @@ input[type="checkbox"]:checked::after {
     .component-dropdown-newtwork.active {
         opacity: 1;
         visibility: visible;
+        z-index: 10;
         transition: all 0.3s linear;
     }
 
