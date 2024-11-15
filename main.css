@@ -100,7 +100,6 @@ h1 {
     font-family: 'Lexend', sans-serif;
 }
 
-
 .detail-head .detail-header .breadcrumb a {
     font-size: 14px;
     font-style: normal;
@@ -1194,7 +1193,7 @@ input[type="checkbox"]:checked::after {
 
     .career .filter-item.location .filter-bottom-list label
     /* .career .filter-item.type .filter-bottom-list label */
-     {
+    {
         display: inline-flex;
         padding: 8px 16px;
         border-radius: 4px;

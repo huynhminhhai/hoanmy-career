@@ -1,24 +1,23 @@
 $(document).ready(function () {
-
     if ($(window).width() >= 576) {
-        if ($('.filter-item.network').length) {
+        if ($('.filter-item.network').length){
             $('.filter-item.network .filter-bottom-list .group-checkbox').slice(10).hide();
 
             // Xử lý sự kiện click của nút "Show more"
             $('.show-more-filter').css('cursor', 'pointer');
-            $('.show-more-filter').click(function () {
+            $('.show-more-filter').click(function() {
                 // Hiển thị tất cả các checkbox còn lại
                 $('.filter-bottom-list .group-checkbox').slice(10).slideDown();
-
+                
                 // Ẩn nút sau khi đã hiển thị các checkbox
                 $(this).hide();
             });
         }
     }
-
-    $('.keyword-text').click(function () {
+    $('.keyword-text').click(function() {
         $(this).toggleClass('open')
     })
+
 
     $(document).on('click touchstart', (e) => {
         if (!$(e.target).closest($('.keyword-text')).length) {
@@ -29,22 +28,17 @@ $(document).ready(function () {
     // hero
 
     let resultCheckbox = [
-        {
-            "text": "Ho Chi Minh",
-            "id": "checkbox-custom_01",
-            "value": "1"
-        }
     ];
 
     function updateChecked() {
-        $('.filter-item.location .check').each(function () {
+        $('.filter-item.location .check').each(function() {
             const checkboxId = $(this).attr('id');
             const isChecked = resultCheckbox.some(item => item.id === checkboxId);
             $(this).prop('checked', isChecked);
         });
     }
 
-    $('.filter-item.location .group-checkbox').click(function () {
+    $('.filter-item.location .group-checkbox').click(function() {
         updateChecked()
     })
 
@@ -160,11 +154,6 @@ $(document).ready(function () {
     });
 
     let resultCheckboxNetwork = [
-        {
-            "text": "Hoan My Sai Gon Hospital",
-            "id": "checkbox-network-1",
-            "value": "Hoan My Sai Gon Hospital"
-        }
     ];
 
     $('.dropdown.dropdown-network').each((i, element) => {
@@ -195,7 +184,7 @@ $(document).ready(function () {
 
                     // Handle the click event on the remove button
                     $removeButton.on('click', function (e) {
-                        e.stopPropagation();
+                        e.stopPropagation(); 
                         // Remove the item from the result
                         resultCheckboxNetwork = resultCheckboxNetwork.filter(r => r.text !== item.text);
                         // Uncheck the corresponding checkbox
@@ -232,7 +221,7 @@ $(document).ready(function () {
         });
 
         // Initialize default checked values
-        $inputs.each(function () {
+        $inputs.each(function() {
             const checkboxId = $(this).attr('id');
             const isChecked = resultCheckboxNetwork.some(item => item.id === checkboxId); // Check if checkbox should be checked
             $(this).prop('checked', isChecked); // Update the checkbox status
@@ -293,19 +282,19 @@ $(document).ready(function () {
         function toggleDropdownClass() {
             // Get the dropdown element
             const $dropdown = $('.dropdown.dropdown-network.default');
-
+            
             // Get the selected item element
             const $selectedItem = $('.dropdown.dropdown-network.default .selected-item');
 
             console.log($selectedItem.length)
-
+          
             // Check if the selected item is empty or contains only whitespace
             if ($selectedItem.length === 0 || $selectedItem.text().trim() === '') {
-                // Add the 'none' class if the selected item is empty
-                $dropdown.addClass('none');
+              // Add the 'none' class if the selected item is empty
+              $dropdown.addClass('none');
             } else {
-                // Remove the 'none' class if the selected item is not empty
-                $dropdown.removeClass('none');
+              // Remove the 'none' class if the selected item is not empty
+              $dropdown.removeClass('none');
             }
         }
 
@@ -377,7 +366,7 @@ $(document).ready(function () {
         if ($('.career-result').length) {
             var careerResultTop = $('.career-result').offset().top;
             var scrollTop = $(window).scrollTop();
-
+    
             if (scrollTop >= careerResultTop) {
                 $('.filter-sticky').addClass('active'); // Hiển thị khi phần tử .career-result bị che bởi top của cửa sổ
             } else {
@@ -407,11 +396,11 @@ $(document).ready(function () {
         $('.component-dropdown-newtwork').addClass('active')
     })
 
-    $('.submit-form').click(function (e) {
-        e.preventDefault()
-        $('.popup-form ').removeClass('active')
-        $('.popup-thank').addClass('active')
-    })
+    // $('.submit-form').click(function(e) {
+    //     e.preventDefault()
+    //     $('.popup-form ').removeClass('active')
+    //     $('.popup-thank').addClass('active')
+    // })
 
 
     // Function to remove active class from all pages
@@ -420,15 +409,15 @@ $(document).ready(function () {
     }
 
     // Add click event to each page
-    $('.pagi-page').each(function () {
-        $(this).on('click', function () {
+    $('.pagi-page').each(function() {
+        $(this).on('click', function() {
             removeActiveClass();
             $(this).addClass('active');
         });
     });
 
     // Add event listener for prev button
-    $('.pagi-prev').on('click', function () {
+    $('.pagi-prev').on('click', function() {
         const $activePage = $('.pagi-page.active');
         if ($activePage.length) {
             const $prevPage = $activePage.prev('.pagi-page');
@@ -440,7 +429,7 @@ $(document).ready(function () {
     });
 
     // Add event listener for next button
-    $('.pagi-next').on('click', function () {
+    $('.pagi-next').on('click', function() {
         const $activePage = $('.pagi-page.active');
         if ($activePage.length) {
             const $nextPage = $activePage.next('.pagi-page');
@@ -461,19 +450,20 @@ $(document).ready(function () {
         var buttonDefaultTop = $button.offset().top;
         var buttonHeight = $button.outerHeight();
         var windowHeight = $(window).height();
-
-        $(window).scroll(function () {
-            var scrollPos = $(window).scrollTop();
-            var bottomScreenPos = scrollPos + windowHeight;
-
-            // Kiểm tra nếu scroll đến hoặc vượt qua section và bottom của màn hình chưa đến vị trí ban đầu của button
-            if (scrollPos >= sectionTop && bottomScreenPos < buttonDefaultTop + buttonHeight) {
-                $button.addClass('sticky');
-            } else {
-                $button.removeClass('sticky');
-            }
+    
+        $(window).scroll(function() {
+          var scrollPos = $(window).scrollTop();
+          var bottomScreenPos = scrollPos + windowHeight;
+          
+          // Kiểm tra nếu scroll đến hoặc vượt qua section và bottom của màn hình chưa đến vị trí ban đầu của button
+          if (scrollPos >= sectionTop && bottomScreenPos < buttonDefaultTop + buttonHeight) {
+            $button.addClass('sticky');
+          } else {
+            $button.removeClass('sticky');
+          }
         });
     }
+
 
     // Chọn tất cả các modal có class 'modal' (hoặc các class khác nếu cần)
     const modals = document.querySelectorAll('.popup-blur, .career-filter');
